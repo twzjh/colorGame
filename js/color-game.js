@@ -11,7 +11,7 @@ let exitBtn = document.querySelector('.exit-btn');
 
 //計時器
 let counterInterval;
-const totalTime = 10;
+const totalTime = 15;
 let counter;
 
 //遊戲畫面
