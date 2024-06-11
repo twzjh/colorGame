@@ -69,7 +69,10 @@ body {
   height: 100vh;
   background-color: black;
 }
-.play-game .time-counter {
+.play-game .counter {
+  margin-bottom: 10px;
+}
+.play-game .counter .time-counter {
   color: aliceblue;
   width: 70px;
   height: 70px;
@@ -79,7 +82,18 @@ body {
   line-height: 70px;
   font-size: 24px;
   margin-left: calc(50% - 35px);
-  margin-bottom: 80px;
+  margin-bottom: 20px;
+}
+.play-game .counter .score-counter {
+  color: aliceblue;
+  width: 120px;
+  height: 70px;
+  background-color: #FCAD26;
+  border-radius: 10px;
+  text-align: center;
+  line-height: 70px;
+  font-size: 24px;
+  margin-left: calc(50% - 60px);
 }
 .play-game .box-big {
   width: 600px;
@@ -96,7 +110,7 @@ body {
   display: flex;
   justify-content: space-between;
   margin: auto;
-  margin-top: 80px;
+  margin-top: 60px;
 }
 .play-game .btn-all button {
   width: 220px;

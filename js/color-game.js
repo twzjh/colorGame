@@ -5,13 +5,15 @@ let continueBtn = document.querySelector('.continue-btn');
 
 //進入遊戲
 let showCounter = document.querySelector('.time-counter')
+let scoreCounter = document.querySelector('.score-counter span:nth-child(2)')
 let playGame = document.querySelector('.play-game');
 let stopBtn = document.querySelector('.stop-btn');
 let exitBtn = document.querySelector('.exit-btn');
 
 //計時器
 let counterInterval;
-const totalTime = 15;
+const totalTime = 5;
+let score = 0;
 let counter;
 
 //遊戲畫面
@@ -75,7 +77,7 @@ function counterTimer() {
     if (counter >= 0) {
         showCounter.innerHTML = counter--;
     }else{
-        alert('時間到');
+        alert(`時間到！恭喜您獲得${score}分！`);
         counterStop();
         location.reload();
     }
@@ -106,6 +108,8 @@ function game() {
     let answerBtn = document.querySelector('.answer');
     answerBtn.addEventListener('click', function () {
         count++;
+        score++;
+        scoreCounter.textContent = score;
         if (count === level) {
             level++;
             size = 100 / level;
